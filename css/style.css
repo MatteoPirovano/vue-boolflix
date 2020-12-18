@@ -42,13 +42,16 @@ h1 {
   cursor: pointer;
 }
 section {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   flex-wrap: wrap;
-  padding: 15px;;
+  padding: 15px;
 }
 .cover {
   height: 330px;
   width: 220px;
+  margin: 15px 0;
   border: 1px solid white;
 }
