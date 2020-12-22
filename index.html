@@ -14,25 +14,17 @@
     <header>
       <h1>boolflix</h1>
       <div class="search_section">
-        <input class="search" type="text" name="search" value="" placeholder="inserisci nome del film">
-        <input class="button_search" type="submit" value="invio">
+        <input class="search" type="text" name="search" value="" placeholder="inserisci nome del film" v-model="searchInput" @keydown.enter="fliterFilms">
+        <input class="button_search" type="submit" value="invio" >
       </div>
     </header>
     <section>
-      <div class="cover"></div>
-      <div class="cover"></div>
-      <div class="cover"></div>
-      <div class="cover"></div>
-      <div class="cover"></div>
-      <div class="cover"></div>
-      <div class="cover"></div>
-      <div class="cover"></div>
-      <div class="cover"></div>
-      <div class="cover"></div>
-      <div class="cover"></div>
-      <div class="cover"></div>
-      <div class="cover"></div>
-      
+      <div  class="cover" v-for="film in films">
+        <img :src="'https://image.tmdb.org/t/p/w600_and_h900_bestv2/'+film.poster_path" :alt="film.title">
+        <div class="cover_information">
+          <p>{{film.title}}</p>
+        </div>
+      </div>
     </section>
   </div>
   <script src="js/script.js" charset="utf-8"></script>

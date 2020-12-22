@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
 }
-body{
+body {
   width: 100%;
   background-color: gray;
 }
@@ -31,27 +31,49 @@ h1 {
   width: 200px;
   padding: 10px;
   border: none;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 .button_search {
   height: 25px;
   width: 50px;
   margin-left: 10px;
   border: none;
-  border-radius: 2px;
+  border-radius: 5px;
   cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: lightgrey;
 }
 section {
-  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
   padding: 15px;
 }
 .cover {
   height: 330px;
   width: 220px;
-  margin: 15px 0;
+  margin: 5px;
+  position: relative;
   border: 1px solid white;
+  border-radius: 2px;
+  background-size: contain;
+}
+.cover > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 2px;
+}
+.cover:hover > .cover_information {
+  visibility: visible;
+}
+.cover_information {
+  position: absolute;
+  left: 0;
+  top:0;
+  height: 328px;
+  width: 218px;
+  border-radius: 2px;
+  visibility: hidden;
+  background-color:  rgba(0, 0, 0, 0.93);
+  color: white;
 }
