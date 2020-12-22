@@ -67,13 +67,24 @@ section {
   visibility: visible;
 }
 .cover_information {
+  height: 328px;
+  width: 218px;
   position: absolute;
   left: 0;
   top:0;
-  height: 328px;
-  width: 218px;
+  padding: 10px;
   border-radius: 2px;
-  visibility: hidden;
   background-color:  rgba(0, 0, 0, 0.93);
   color: white;
+  visibility: hidden;
+  overflow-y: scroll;
+}
+.cover_information > ul {
+  list-style: none;
+}
+.cover_information > ul > li{
+  margin: 10px 0;
+}
+.cover_information > ul > li > span{
+  color: red;
 }
