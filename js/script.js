@@ -18,9 +18,9 @@ var boolflix = new Vue ({
       })
       .then(function (response) {
         self.films = response.data.results;
-        var completeRate=parseInt(self.films.vote_average/2);
-        var rateRound = parseInt(Math.round(completeRate);
-        self.points = rateRound
+        // var completeRate=parseInt(self.films.vote_average/2);
+        // var rateRound = parseInt(Math.round(completeRate);
+        // self.points = rateRound
       })
     }
 
